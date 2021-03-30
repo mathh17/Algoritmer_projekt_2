@@ -45,14 +45,14 @@ def insert(T, z):
 #Returnerer en liste med nøglerne i træet T i en sorteret orden (side 288) 
 def orderedTraversal(T):
     tree_list = []
-    traverse_recursive(T.root)
+    traverse_recursive(root(T), tree_list)
     return tree_list
     
-def traverse_recursive(x):
+def traverse_recursive(x, tree_list):
     if x != None:
-        traverse_recursive(left(x))
-        tree_list.append(x)
-        traverse_recursive(right(x))
+        traverse_recursive(left(x), tree_list)
+        tree_list.append(key(x))
+        traverse_recursive(right(x), tree_list)
 
 #Returnerer et nyt og tomt træ
 def createEmptyDict():
@@ -82,6 +82,7 @@ insert(T, z)
 
 print(T)
 
+print(orderedTraversal(T))
 
 
 
