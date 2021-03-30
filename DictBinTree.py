@@ -3,37 +3,38 @@
 
 
 #Returnerer en boolean som angiver om nøglen k er i træet T (side 290-291)
-def search(T, k):
+# def search(T, k):
 
-#virker ikke helt efter hensigten. 
-A = [15,6,18,3,7,17,20,2,4,13,9]
+# #virker ikke helt efter hensigten. 
+#     A = [15,6,18,3,7,17,20,2,4,13,9]
 
-#Returnerer index for den ønskede key
-def TREE_SEARCH(x,k):
-    if x == None or k == A[x]:
-        return x
-    if k < A[x]:
-        return TREE_SEARCH(x*2+1,k)
-    else:
-        return TREE_SEARCH(x*2+2,k)
+# #Returnerer index for den ønskede key
+# def TREE_SEARCH(x,k):
+#     if x == None or k == A[x]:
+#         return x
+#     if k < A[x]:
+#         return TREE_SEARCH(x*2+1,k)
+#     else:
+#         return TREE_SEARCH(x*2+2,k)
     
     
 
-print(TREE_SEARCH(0,7))
+#print(TREE_SEARCH(0,7))
     
 #Indsæt nøglen k i træet T (side 294)
 def insert(T, z):
     y = None
-    x = root(T)
-    while x != None:
+    x = T
+    while x[0] != None:
         y = x
         if key(z) < key(x):
             x = left(x)
         else:
             x = right(x)        
     if y == None:
-        T[0] = z     # Tree was empty, create root 
-    else if key(z) < key(y):
+        T += z     # Tree was empty, create root 
+
+    elif key(z) < key(y):
         y[1] = z
     else:
         y[2] = z
@@ -70,4 +71,19 @@ def right(x):
 
 def root(x):
     return x[0]
+
+
+
+T = [5,[2,None,None], [6, None, None]]
+z = [3, None, None]
+z2 = [7, None, None]
+T = createEmptyDict()
+insert(T, z)
+
+print(T, z)
+
+
+
+
+
 
