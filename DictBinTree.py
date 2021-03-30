@@ -24,7 +24,7 @@
 #Indsæt nøglen k i træet T (side 294)
 def insert(T, z):
     y = None
-    x = T[0]
+    x = root(T)
     while x != None:
         y = x
         if key(z) < key(x):
@@ -56,7 +56,7 @@ def traverse_recursive(x, tree_list):
 
 #Returnerer et nyt og tomt træ
 def createEmptyDict():
-    return [None]
+    return [[None]]
 
 
 
