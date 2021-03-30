@@ -24,16 +24,16 @@
 #Indsæt nøglen k i træet T (side 294)
 def insert(T, z):
     y = None
-    x = T
-    while x[0] != None:
+    x = T[0]
+    while x != None:
         y = x
         if key(z) < key(x):
             x = left(x)
         else:
-            x = right(x)        
+            x = right(x)
+            
     if y == None:
-        T += z     # Tree was empty, create root 
-
+        T = z     # Tree was empty, create root 
     elif key(z) < key(y):
         y[1] = z
     else:
@@ -69,18 +69,18 @@ def left(x):
 def right(x):
     return x[2]
 
-def root(x):
-    return x[0]
+def root(T):
+    return T[0]
 
 
 
-T = [5,[2,None,None], [6, None, None]]
+T = [[5,[2,None,None], [6, None, None]]]
 z = [3, None, None]
 z2 = [7, None, None]
-T = createEmptyDict()
+
 insert(T, z)
 
-print(T, z)
+print(T)
 
 
 
