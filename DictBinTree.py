@@ -27,10 +27,17 @@ def insert(T, k):
 
 #Returnerer en liste med nøglerne i træet T i en sorteret orden (side 288) 
 def orderedTraversal(T):
+    tree_list = []
+    traverse_recursive(T.root)
     
-    
+def traverse_recursive(x):
+    if x != None:
+        traverse_recursive(left(x))
+        
+        traverse_recursive(right(x))
+
 #Returnerer et nyt og tomt træ
 def createEmptyDict():
-
+    return [None]
 
 
