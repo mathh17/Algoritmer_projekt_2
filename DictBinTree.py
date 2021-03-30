@@ -31,11 +31,12 @@ def insert(T, z):
 def orderedTraversal(T):
     tree_list = []
     traverse_recursive(T.root)
+    return tree_list
     
 def traverse_recursive(x):
     if x != None:
         traverse_recursive(left(x))
-        
+        tree_list.append(x)
         traverse_recursive(right(x))
 
 #Returnerer et nyt og tomt træ
