@@ -5,17 +5,17 @@
 #Returnerer en boolean som angiver om nøglen k er i træet T (side 290-291)
 # def search(T, k):
 
-# #virker ikke helt efter hensigten. 
-#     A = [15,6,18,3,7,17,20,2,4,13,9]
+#virker ikke helt efter hensigten. 
+A = [15,6,18,3,7,17,20,2,4,13,9]
 
-# #Returnerer index for den ønskede key
-# def TREE_SEARCH(x,k):
-#     if x == None or k == A[x]:
-#         return x
-#     if k < A[x]:
-#         return TREE_SEARCH(x*2+1,k)
-#     else:
-#         return TREE_SEARCH(x*2+2,k)
+#Returnerer index for den ønskede key
+def TREE_SEARCH(x,k):
+    if x == None or k == A[x]:
+        return x
+    if k < A[x]:
+        return TREE_SEARCH(x*2+1,k)
+    else:
+        return TREE_SEARCH(x*2+2,k)
     
     
 
