@@ -3,7 +3,7 @@
 
 
 #Returnerer en boolean som angiver om nøglen k er i træet T (side 290-291)
-# def search(T, k):     
+def search(T, k):     
     if k == T[0]:
         return True
     if k < T[0]:
@@ -11,13 +11,13 @@
         if T[1] == None:
             return False
         #forsætter søgning til venstre side i træet
-        return TREE_SEARCH(k,T[1])
+        return search(k,T[1])
     else:
         #tjekker on node i venstre side er et blad        
         if T[2] == None:
             return False        
         #forsætter søgning til højre side i træet
-        return TREE_SEARCH(k,T[2])
+        return search(k,T[2])
     
 #Indsæt nøglen k i træet T (side 294)
 def insert(T, z):
