@@ -34,7 +34,7 @@ def insert(T, z):
             x = right(x)
             
     if y == None:
-        y = [z, None, None]     # Tree was empty, create root 
+        T[0] = [z, None, None]     # Tree was empty, create root 
     elif z < key(y):
         y[1] = [z, None, None]
     else:
