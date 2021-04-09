@@ -29,17 +29,17 @@ def insert(T, z):
     x = root(T)
     while x != None:
         y = x
-        if key(z) < key(x):
+        if z < key(x):
             x = left(x)
         else:
             x = right(x)
             
     if y == None:
-        T = z     # Tree was empty, create root 
-    elif key(z) < key(y):
-        y[1] = z
+        y = [z, None, None]     # Tree was empty, create root 
+    elif z < key(y):
+        y[1] = [z, None, None]
     else:
-        y[2] = z
+        y[2] = [z, None, None]
     
 
     
@@ -58,7 +58,7 @@ def traverse_recursive(x, tree_list):
 
 #Returnerer et nyt og tomt træ
 def createEmptyDict():
-    return [[None]]
+    return [None]
 
 
 
@@ -77,22 +77,11 @@ def root(T):
 
 
 T = [[5,[2,None,None], [6, None, None]]]
-z = [3, None, None]
-z2 = [7, None, None]
-empty = [[None]]
+z = 3
+z2 = 7
+empty = createEmptyDict()
 
-insert(T, z)
-
-print(T)
-
-print(orderedTraversal(T))
-print(search(T, 5))
-
-k=10
-
-print(search(T,k))
-
-
-
+insert(empty, z)
+print(empty)
 
 # %%
