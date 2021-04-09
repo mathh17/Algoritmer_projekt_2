@@ -1,6 +1,11 @@
 # -*- coding: utf-8 -*-
+#%%
 
 
+#Returnerer en boolean som angiver om nøglen k er i træet T (side 290-291)
+def search(T, k):
+    x  = root(T)
+    return searchTree(x,k)
 
 #Returnerer en boolean som angiver om nøglen k er i træet T (side 290-291)
 def search(T,k):
@@ -11,7 +16,7 @@ def search(T,k):
 def tree_search(T, k):     
     if k == key(T):
         return True
-    if k < key(T):
+    if k < key(x):
         #tjekker on node i højre side er et blad
         if left(T) == None:
             return False
@@ -86,7 +91,9 @@ insert(T, z)
 print(T)
 
 print(orderedTraversal(T))
+print(search(T, 5))
 
+k=7
 
 k=1
 
@@ -94,3 +101,5 @@ print(search(T,k))
 
 
 
+
+# %%
