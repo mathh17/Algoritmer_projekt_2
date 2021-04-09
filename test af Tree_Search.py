@@ -12,23 +12,35 @@ Created on Tue Mar 30 11:17:58 2021
 
 
 #Returnerer index for den ønskede key
-def TREE_SEARCH(k,T):
-    print(T)      
-    if k == T[0]:
+def search(T, k):     
+    if k == key(T):
         return True
-    if k < T[0]:
+    if k < key(T):
         #tjekker on node i højre side er et blad
-        if T[1] == None:
+        if right(T) == None:
             return False
-        #forsætter søgning til venstre side i træet
-        return TREE_SEARCH(k,T[1])
+        #forsætter søgning til højre side i træet
+        return search(right(T), k)
     else:
         #tjekker on node i venstre side er et blad        
-        if T[2] == None:
+        if left(T) == None:
             return False        
-        #forsætter søgning til højre side i træet
-        return TREE_SEARCH(k,T[2])
-    
+        #forsætter søgning til venstre side i træet
+        return search(left(T), k)
+
+
+def key(x):
+    return x[0]
+
+def left(x):
+    return x[1]
+
+def right(x):
+    return x[2]
+
+def root(T):
+    return T[0]
+
 
 
 k = 8
@@ -37,4 +49,7 @@ T = [5,[2,None,None],[8,None,[11,None,None]]]
     
     
 
-print(TREE_SEARCH(k,T))
+print(search(T, k))
+
+
+

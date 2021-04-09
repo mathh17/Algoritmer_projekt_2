@@ -4,20 +4,20 @@
 
 #Returnerer en boolean som angiver om nøglen k er i træet T (side 290-291)
 def search(T, k):     
-    if k == T[0]:
+    if k == key(T):
         return True
-    if k < T[0]:
+    if k < key(T):
         #tjekker on node i højre side er et blad
-        if T[1] == None:
+        if right(T) == None:
             return False
-        #forsætter søgning til venstre side i træet
-        return search(k,T[1])
+        #forsætter søgning til højre side i træet
+        return search(right(T), k)
     else:
         #tjekker on node i venstre side er et blad        
-        if T[2] == None:
+        if left(T) == None:
             return False        
-        #forsætter søgning til højre side i træet
-        return search(k,T[2])
+        #forsætter søgning til venstre side i træet
+        return search(left(T), k)
     
 #Indsæt nøglen k i træet T (side 294)
 def insert(T, z):
@@ -83,6 +83,9 @@ print(T)
 print(orderedTraversal(T))
 
 
+k=5
+
+print(search(T,k))
 
 
 
