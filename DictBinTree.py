@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-#%%
 
 #Returnerer en boolean som angiver om nøglen k er i træet T (side 290-291)
 def search(T,k):
@@ -84,4 +83,14 @@ empty = createEmptyDict()
 insert(empty, z)
 print(empty)
 
-# %%
+print("Inserted", T)
+
+print(orderedTraversal(T))
+print(search(T, 5))
+
+k=10
+
+print(search(T,k))
+
+
+
