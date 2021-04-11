@@ -15,4 +15,4 @@ print(T)
 
 for line in sys.stdin:
     print("Please enter the key you want to search for:")
-    print(DB.search(T,line))
+    print(DB.search(T,int(line)))
