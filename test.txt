@@ -1,0 +1,17 @@
+Ordered traversal: 
+0
+1
+10
+12
+21
+23
+23
+34
+43
+56
+56
+56
+89
+90
+90
+Please enter the key you want to search for:
