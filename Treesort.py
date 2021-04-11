@@ -6,13 +6,10 @@ T = DB.createEmptyDict()
 def treesort(T):
     for line in sys.stdin:
         DB.insert(T,int(line))
-    print(DB.orderedTraversal(T))
+    DB.orderedTraversal(T)
 
 treesort(T)
 
-print(T)
-
-
+print("Please enter the key you want to search for:")
 for line in sys.stdin:
-    print("Please enter the key you want to search for:")
     print(DB.search(T,int(line)))

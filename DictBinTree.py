@@ -47,7 +47,8 @@ def insert(T, z):
 def orderedTraversal(T):
     tree_list = []
     traverse_recursive(root(T), tree_list)
-    return tree_list
+    for i in tree_list:
+        print(i)
     
 def traverse_recursive(x, tree_list):
     if x != None:
@@ -72,25 +73,3 @@ def right(x):
 
 def root(T):
     return T[0]
-
-
-
-T = [[5,[2,None,None], [6, None, None]]]
-z = 3
-z2 = 7
-empty = createEmptyDict()
-
-insert(empty, z)
-print(empty)
-
-print("Inserted", T)
-
-print(orderedTraversal(T))
-print(search(T, 5))
-
-k=10
-
-print(search(T,k))
-
-
-
